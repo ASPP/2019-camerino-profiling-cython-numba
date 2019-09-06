@@ -2,7 +2,10 @@
 
 
 def factorial(n):
-    return factorial(n-1) * n
+    if n == 0:
+        return 1
+    else:
+        return factorial(n-1) * n
 
 
 def read_data(filename):
@@ -23,7 +26,7 @@ def compute_factorials_for_list(numbers):
 
 
 def main():
-    numbers = read_data('numbers.txt')
+    numbers = read_data('numbers.txt')[:100]
     compute_factorials_for_list(numbers)
 
 
